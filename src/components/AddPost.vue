@@ -13,21 +13,21 @@ Add Post
         <div class="input-group-addon">
           <i class="fa fa-address-card"></i>
         </div> 
-        <input v-model = "newPost.title" class="form-control here" type="text">
+        <input v-model = "newPost.title" class="form-control here" type="text" required="required" minlength="2">
       </div>
     </div>
   </div>
   <div class="form-group row">
     <label for="text1" class="col-4 col-form-label">Text</label> 
     <div class="col-8">
-      <input v-model = "newPost.text" class="form-control here" type="textarea">
+      <input v-model = "newPost.text" class="form-control here" type="textarea" required="required" maxlength="300">
     </div>
   </div> 
   <div class="form-group row">
     <div class="offset-4 col-8">
       <button name="submit" type="submit" class="btn btn-primary">Submit</button>
       <input  type="reset" value="Reset the form">
-      <label>{{ errors }}</label>
+     
 
     </div>
   </div>
@@ -53,7 +53,6 @@ export default {
 
   	  },
 
-        errors:[],
        
 
 
