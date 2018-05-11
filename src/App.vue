@@ -2,7 +2,10 @@
   <div id="app">
    
    <NavBar />
-   <AppPosts />
+
+   <router-view></router-view>
+
+   
     
   </div>
 </template>
@@ -10,12 +13,14 @@
 <script>
 import NavBar from './components/NavBar.vue'
 import AppPosts from './components/AppPosts.vue'
+import SinglePost from './components/SinglePost.vue'
 
 export default {
   name: 'app',
   components: {
     NavBar,
-    AppPosts
+    AppPosts,
+    SinglePost,
   }
 }
 </script>
