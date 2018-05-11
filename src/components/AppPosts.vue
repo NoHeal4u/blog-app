@@ -8,6 +8,8 @@
   <div class="card-body">
     <h5 class="card-title">{{ post.title }}</h5>
     <router-link class="btn btn-primary" :to="{ name: 'single-post', params: { id: post.id } }">View Post</router-link>
+    <button v-on:click="deletePost(post.id , index)" >Delete Post</button>
+     <router-link class="btn btn-primary" :to="{ name: 'edit', params: { id: post.id } }">Edit post</router-link>
     
     
     
@@ -44,6 +46,19 @@ import { posts } from '../services/Posts'
 				posts: []
 			}
 		},
+
+		methods: {
+
+			deletePost(id, index) {
+
+				posts.delete(id)
+				.then((response)=>{
+					this.posts.splice(index, 1)
+				})
+			}
+		}
+
+
 
 	}
 

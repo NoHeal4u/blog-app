@@ -14,6 +14,7 @@ const routes = [
   { path: '/posts', component: AppPosts, name: 'posts' },
   { path: '/posts:id', component: SinglePost, name: 'single-post'},
   { path: '/add', component: AddPost, name: 'add' },
+  { path: '/edit-post/:id',component: AddPost, name: 'edit'}
   
 ]
 
